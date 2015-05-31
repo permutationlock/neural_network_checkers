@@ -1,0 +1,44 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Times New Roman;}{\f4\fswiss\fprq2\fcharset0 Arial;}{\f5\fnil\fprq2\fcharset0 DejaVu Sans;}{\f6\fnil\fprq2\fcharset0 Lohit Hindi;}{\f7\fnil\fprq0\fcharset1 Lohit Hindi;}}
+{\colortbl;\red0\green0\blue0;\red128\green128\blue128;}
+{\stylesheet{\s0\snext0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033 Normal;}
+{\s15\sbasedon0\snext16\sb240\sa120\keepn\dbch\af5\dbch\af6\afs28\loch\f4\fs28 Heading;}
+{\s16\sbasedon0\snext16\sb0\sa120 Text body;}
+{\s17\sbasedon16\snext17\sb0\sa120\dbch\af7 List;}
+{\s18\sbasedon0\snext18\sb120\sa120\noline\i\dbch\af7\afs24\ai\fs24 Caption;}
+{\s19\sbasedon0\snext19\noline\dbch\af7 Index;}
+}{\info{\author Aven }{\creatim\yr2014\mo2\dy6\hr3\min12}{\revtim\yr0\mo0\dy0\hr0\min0}{\printim\yr0\mo0\dy0\hr0\min0}{\comment LibreOffice}{\vern3600}}\deftab709
+\viewscale100
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse195\pgwsxn11906\pghsxn16838\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\pgdscnxt0 Default;}}
+\formshade\paperh16838\paperw11906\margl1134\margr1134\margt1134\margb1134\sectd\sbknone\sectunlocked1\pgndec\pgwsxn11906\pghsxn16838\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+\pgndec\pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1{\b\ab\rtlch \ltrch\loch
+ANALYSIS FOR NEURAL NET CODE\u13\'0d}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1{\rtlch \ltrch\loch
+\u13\'0d}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1{\ul\ulc0\rtlch \ltrch\loch
+Evaluation Timing:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1{\rtlch \ltrch\loch
+After doing timing testing my neural net class's evaluate function was able to go through ~4}{\rtlch \ltrch\loch
+6}{\rtlch \ltrch\loch
+,000 board evaluations per second.  This is significantly less than the half a million that was mentioned in class and I am still unsure why.  I did the timing using the c++ chrono header functions and simply ran evaluations for 10 seconds and divided the number of evaluations performed by 10.  I also calculated the amount of time taken up by the empty loop and attempted to factor this out by adding it back on, but it was a very small amount anyway.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1{\ul\ulc0\rtlch \ltrch\loch
+Profiler:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1{\ulnone\ulc0\rtlch \ltrch\loch
+The profiler results showed that my evaluate function took 22.30 micro seconds per call.  Other than that the results simply stated that all other function calls took 0 seconds, other than the calls to the chrono duration function, which took approximately 0.23 micro seconds per call.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1\ulnone\ulc0\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1{\ulnone\ulc0\rtlch \ltrch\loch
+I did my compiling on Ubuntu using g++ and used gprof to profile the code.  Maybe it is the way my code is written but }{\ulnone\ulc0\rtlch \ltrch\loch
+the profiler results were very underwhelming.}{\ulnone\ulc0\rtlch \ltrch\loch
+  It simply stated that almost all the time was spent in the evaluate() function of NeuralNet.  I researched gprof and I believe I am using it correctly and tried running through several versions, the only one producing the results being the timing version where I ran evaluations for 1 second.  This produced the results you can see in }{\i\ulnone\ulc0\ai\rtlch \ltrch\loch
+profiler_output.txt}{\ulnone\ulc0\rtlch \ltrch\loch
+.   }{\ulnone\ulc0\rtlch \ltrch\loch
+I also tried a version without the timing functions and it still produced the same results.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1\rtlch \ltrch\loch
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\sl360\slmult1{\ulnone\ulc0\rtlch \ltrch\loch
+I believe this is because of how my code is written, where everything is in arrays and the evaluate function simply goes through accessing elements and multiplying numbers.  Hopefully I didn't mess anything up too much :/  I didn't start analyzing the profiler results until tonight otherwise I would have asked you earlier.}
+\par }
